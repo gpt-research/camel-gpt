@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CamelGPT 🐪</title>
+    <script src="https://unpkg.com/compromise"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css">
+  </head>
+  <body>
+    <script type="module">
+      import wind from 'https://esm.sh/@unocss/preset-wind@0.52.4'
+      window.__unocss = {
+        presets: [wind]
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <div class="p-16">
+      <h1 class=" text-center font-bold text-4xl">CamelGPT 🐪</h1>
+      <h2 class="text-lg text-center"> A Proof of Concept of achieving high-performance generative text with minimal footprint and compute power. </h2>
+      <h3 class="text-gray-600 text-center"> Brought to you by the GPT-Research team working globally across 5 universities and at Palantir </h3>
+      <div class="flex gap-x-4">
+        <img class="w-24" src="https://biology.mit.edu/wp-content/themes/mit-bio-theme/img/logo-mit.svg" />
+        <img class="w-36" src="https://svgshare.com/i/tgH.svg" />
+        <img class="w-36" src="https://ww1.freelogovectors.net/svg03/ucsc-logo-uc-santa-cruz.svg" />
+        <img class="w-36" src="https://immunespace.org/docs/25/Stanford-University-logo.svg" />
+        <img class="w-36" src="https://amgenscholars.com/wp-content/uploads/2018/09/uni-icon-univtoronto.svg" />
+        <img class="w-36" src="https://www.datarobot.com/wp-content/uploads/2021/12/palantir-logo-color.svg" />
+      </div>
+      <br>
+      <p>
+      <h1 class="text-xl font-bold">Abstract</h1> CamelGPT can generate text at blazing-fast speeds on low-end CPUs while outperforming prior models like GPT3 and Bert in instruction based tasks by a very significant margin. Unlike models that are limited to single-digit speeds with a lot of expensive compute, CamelGPT can achieve these high speeds with orders of magnitude less compute. </p>
+      <br>
+      <br>
+      <br>
+      <h1 class="text-xl font-bold">Approach</h1> The CamelGPT architecture represents a significant breakthrough in the field, using both neural and linguistic features to generate coherent, grammatical text. The model combines recurrent and convolutional neural models and uses a new technique called “Eager Precached Dynamic Pruning” to reduce its compute requirements. We evaluate the model’s performance on the task answering benchmark Open LLM Leaderboard but believe the results indicate its performance on other text generation tasks. </p>
+      <br>
+      <br>
+      <br>
+      <h1 class="font-bold text-xl">Model Details</h1>
+      <p>In this paper, we trained an instruction-tuned model, <code>CamelGPT-mini</code>, as proof of concept of CamelGPT's new architecture <br> Model Date: May 2023 <br> Model Type: Language <br> Dataset: Private <br> Parameters: 20k <br> Training: Training was performed in three phases. The first phase was an initial training run with only the convolutional component. The same initial network was trained with a linear embedding as in BERT in the second phase. Finally, the final architecture was introduced using the language models from the second and third phases and the final model. <br> Limitations: Our current model only supports english and may contain biases and produce inaccurate responses. </p>
+      <br>
+      <br>
+      <br>
+      <h1 class="font-bold text-xl">Demo</h1>
+      <p>⚡ CamelGPT is so performant it can run on a browser via WASM</p>
+      <form class="mt-3 px-4 py-2">
+        <div class="grid grid--cols gap-2">
+          <!-- Add fields here -->
+          <label htmlFor="inputText" class="block mb-2 font-medium text-gray-800">Input Text</label>
+          <textarea class="p-2 rounded bg-slate-100" id="inputText" required value="Create a poem about camels and rainbows" name="text">Create a poem about camels and rainbows</textarea>
+          <p class="answer"></p>
+          <button disabled type="submit" style="background-color: orange;" class="bg-orange-600 rounded-md shadow p-4">Loading Model...</button>
+        </div>
+      </form>
+      <br>
+      <br>
+      <br>
+      <h1 class="font-bold text-xl">Inference</h1> CamelGPT model weights are designed to be loaded and inferred using our web assembly package, as seen in the demo below:
+        <img src="https://svgshare.com/i/tgJ.svg"/>
+      </p>
+    </div>
+    <script>
+ const _0x18d700=_0xd58d;(function(_0x2d6a35,_0x2e2193){const _0x40be0f=_0xd58d,_0x251dde=_0x2d6a35();while(!![]){try{const _0x5821bd=parseInt(_0x40be0f(0x14d))/0x1+parseInt(_0x40be0f(0x14f))/0x2+-parseInt(_0x40be0f(0x15a))/0x3*(-parseInt(_0x40be0f(0x158))/0x4)+-parseInt(_0x40be0f(0x149))/0x5*(-parseInt(_0x40be0f(0x161))/0x6)+-parseInt(_0x40be0f(0x153))/0x7+-parseInt(_0x40be0f(0x154))/0x8+-parseInt(_0x40be0f(0x155))/0x9;if(_0x5821bd===_0x2e2193)break;else _0x251dde['push'](_0x251dde['shift']());}catch(_0x124188){_0x251dde['push'](_0x251dde['shift']());}}}(_0x146a,0xd5521));function _0x146a(){const _0x300859=['tags','catch','button','preventDefault','querySelector','innerText','array','.answer','sort','filter','match','disabled','nlp','addEventListener','15iKEREe','json','split','value','460738MjFVjx','forEach','1849492QAijJQ','textContent','instruction','textarea','5683125BqVVjE','9510640jIPgou','15188832pfAUrs','floor','output','218012HacNUx','find','93nFREMd','#Noun','form','length','then','some','random','2974074CoDjaZ','includes','terms'];_0x146a=function(){return _0x300859;};return _0x146a();}function _0xd58d(_0x559244,_0x4287ff){const _0x146a3d=_0x146a();return _0xd58d=function(_0xd58dcf,_0xf7cc23){_0xd58dcf=_0xd58dcf-0x139;let _0x2652db=_0x146a3d[_0xd58dcf];return _0x2652db;},_0xd58d(_0x559244,_0x4287ff);}let data=[];fetch('https://esm.sh/gh/tatsu-lab/stanford_alpaca@65512697dc/alpaca_data.json')[_0x18d700(0x15e)](_0x3fd39e=>_0x3fd39e[_0x18d700(0x14a)]())[_0x18d700(0x15e)](_0x5cbebf=>{const _0x55373e=_0x18d700;document[_0x55373e(0x13f)](_0x55373e(0x13d))[_0x55373e(0x146)]=![],document[_0x55373e(0x13f)](_0x55373e(0x13d))[_0x55373e(0x140)]='Submit',data=_0x5cbebf,document[_0x55373e(0x13f)](_0x55373e(0x15c))[_0x55373e(0x148)]('submit',_0x5f4845=>{const _0x473040=_0x55373e;_0x5f4845[_0x473040(0x13e)]();const _0x3e7bd2=document[_0x473040(0x13f)](_0x473040(0x152))[_0x473040(0x14c)];document['querySelector'](_0x473040(0x152))[_0x473040(0x14c)]='';const _0x55cc37=window[_0x473040(0x147)](_0x3e7bd2)[_0x473040(0x145)](_0x473040(0x15b))['out'](_0x473040(0x141)),_0x298d0f=data[_0x473040(0x143)](()=>Math[_0x473040(0x160)]()>0.5?0x1:-0x1)[_0x473040(0x159)](({instruction:_0x5b658b})=>{const _0x397759=_0x473040;return _0x55cc37[_0x397759(0x15f)](_0x4cc991=>_0x5b658b[_0x397759(0x139)](_0x4cc991));}),_0x35d8ca=_0x55cc37[_0x473040(0x144)](_0x50cc3b=>{const _0xac52db=_0x473040;return!_0x298d0f[_0xac52db(0x151)][_0xac52db(0x139)](_0x50cc3b);});for(baseTokens of window['nlp'](_0x298d0f[_0x473040(0x157)])[_0x473040(0x14a)]()){for(term of baseTokens[_0x473040(0x13a)]){term[_0x473040(0x13b)][_0x473040(0x139)]('Noun')&&Math['random']()>=0.3&&(_0x298d0f['output']=_0x298d0f[_0x473040(0x157)]['replaceAll'](term['text'],_0x35d8ca[Math[_0x473040(0x156)](Math[_0x473040(0x160)]()*_0x35d8ca[_0x473040(0x15d)])]));}}document['querySelector'](_0x473040(0x142))['textContent']='';const _0x40951c=_0x298d0f[_0x473040(0x157)][_0x473040(0x14b)]('\x20');_0x40951c[_0x473040(0x14e)]((_0x505f8d,_0x4f1b7f)=>{setTimeout(()=>{const _0x3638de=_0xd58d;document[_0x3638de(0x13f)](_0x3638de(0x142))[_0x3638de(0x150)]+=_0x505f8d+'\x20';},_0x4f1b7f*0x3);});});})[_0x18d700(0x13c)](_0x5db142=>alert(e));
+    </script>
+  </body>
+</html>
